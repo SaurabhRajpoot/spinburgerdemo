@@ -17,3 +17,22 @@
          s.src = 'https://d1mj578wat5n4o.cloudfront.net/boxever-1.4.9.min.js';
          var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
+
+
+
+    // Place an anonymous function in the Boxever queue 
+_boxeverq.push(function() { 
+    var searchEvent = {
+        "channel": "WEB",
+        "type": "VIEW",
+        "language": "EN",
+        "currency": "USD",
+        "page": "home page",
+        "pos": "spinburgerdemo101",
+        "browser_id": Boxever.getID()
+        //"browser_id": _boxeverq.getID()
+    };
+    // Invoke event create 
+    // (<event msg>, <callback function>, <format>)
+    Boxever.eventCreate(searchEvent, function(data){}, 'json');
+});
